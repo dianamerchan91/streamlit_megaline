@@ -26,7 +26,7 @@ st.dataframe(data.describe())
 
 st.header('Visualización de datos')
 
-fig, ax = plt.subplots(1, 4), sharey=True, figsize=(16,4))
+fig, ax = plt.subplots((1, 4), sharey=True, figsize=(16,4))
 ax[0].set_ylabel('%')
 
 for idx, col in enumerate(['calls', 'minutes', 'messages', 'mb_used']):
