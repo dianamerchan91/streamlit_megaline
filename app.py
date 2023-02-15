@@ -55,7 +55,7 @@ if st.button('Predecir'):
   else:
     pred = 'Ultimate'
     
-  st.text(f'Tu plan de telefonía movil ideal es: {pred})
+  st.text(f'Tu plan de telefonía movil ideal es: {pred}')
  else:
   st.text('Seleccione entre las opciones e imprima predecir')
                       
