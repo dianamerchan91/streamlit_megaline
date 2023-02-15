@@ -45,13 +45,18 @@ with col1:
   
 with col2:
   mensajes = st.slider('Mensajes al mes', 0, 224)
-  mb_used = st.slider('MB usados al mes, 0, 49745)
+  mb_used = st.slider('MB usados al mes', 0, 49745)
                       
 # Predicción
 if st.button('Predecir'):
   pred = modelo.predict(np.array([[llamadas, minutos, mensajes, mb_used]]))
+  if pred == 0:
+    pred = 'Surf'
+  else:
+    pred = 'Ultimate'
+    
   st.text(f'Tu plan de telefonía movil ideal es: {pred})
-else:
+ else:
   st.text('Seleccione entre las opciones e imprima predecir')
                       
                       
